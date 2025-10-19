@@ -1,0 +1,773 @@
+ :root {
+            --primary: #2a7f62;
+            --secondary: #f8f9fa;
+            --accent: #ff914d;
+            --light: #e8f5e9;
+            --dark: #1a535c;
+            --pitta: #e74c3c;
+            --kapha: #3498db;
+            --vata: #9b59b6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Add this to your existing CSS in the style section */
+
+/* Navigation button hover effects */
+.nav-link {
+    position: relative;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover:after {
+    width: 80%;
+}
+
+/* Primary button hover effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--dark);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover:before {
+    left: 0;
+}
+
+/* Outline button hover effect */
+.btn-outline-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border-width: 2px;
+}
+
+.btn-outline-primary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-outline-primary:hover {
+    border-color: var(--primary);
+    color: white !important;
+}
+
+.btn-outline-primary:hover:before {
+    left: 0;
+}
+
+/* Logout button hover effect */
+.btn-danger {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.btn-danger:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #c82333;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn-danger:hover:before {
+    left: 0;
+}
+        
+        .hero-section {
+            background: linear-gradient(rgba(42, 127, 98, 0.9), rgba(26, 83, 92, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232a7f62"/><path d="M0 50 Q 25 30, 50 50 T 100 50" fill="none" stroke="%23e8f5e9" stroke-width="2"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+            border-radius: 0 0 30px 30px;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+            border: none;
+            margin-bottom: 25px;
+            height: 100%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 10px 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1a535c;
+            border-color: #1a535c;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .dosha-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .vata-card {
+            background: linear-gradient(to right, #8e9eab, #eef2f3);
+        }
+        
+        .pitta-card {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        }
+        
+        .kapha-card {
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+        }
+        
+        .calendar-day {
+            border: 1px solid #dee2e6;
+            min-height: 120px;
+            padding: 10px;
+            position: relative;
+            transition: all 0.3s;
+            background-color: white;
+        }
+        
+        .calendar-day:hover {
+            background-color: var(--light);
+            cursor: pointer;
+        }
+        
+        .calendar-day.today {
+            background-color: rgba(42, 127, 98, 0.1);
+            border: 2px solid var(--primary);
+        }
+        
+        .day-number {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            font-weight: bold;
+            background-color: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .day-number.today {
+            background-color: var(--accent);
+        }
+        
+        .activity-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 3px;
+        }
+        
+        .food-dot { background-color: #4caf50; }
+        .exercise-dot { background-color: #2196f3; }
+        .wellness-dot { background-color: #9c27b0; }
+        .reminder-dot { background-color: #ff9800; }
+        
+        .activity-detail {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .social-icon {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: white;
+            transition: color 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .prakriti-badge {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        
+        .pitta-badge {
+            background: rgba(231, 76, 60, 0.15);
+            color: var(--pitta);
+        }
+        
+        .kapha-badge {
+            background: rgba(52, 152, 219, 0.15);
+            color: var(--kapha);
+        }
+        
+        .vata-badge {
+            background: rgba(155, 89, 182, 0.15);
+            color: var(--vata);
+        }
+        
+        .dashboard-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .daily-plan {
+            border-radius: 12px;
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .day-header {
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: 2px dashed #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .recommendation-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .rec-icon {
+            background: rgba(76, 175, 80, 0.15);
+            color: var(--primary);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .login-container {
+            max-width: 500px;
+            margin: 100px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        .progress {
+            height: 12px;
+            border-radius: 10px;
+        }
+        
+        .progress-bar-pitta {
+            background-color: var(--pitta);
+        }
+        
+        .progress-bar-kapha {
+            background-color: var(--kapha);
+        }
+        
+        .progress-bar-vata {
+            background-color: var(--vata);
+        }
+        
+        .dashboard-section {
+            display: none;
+        }
+        
+        #dashboard {
+            display: none;
+        }
+        
+        #loginSection, #registerSection {
+            display: none;
+        }
+        
+        #welcomeSection {
+            display: block;
+        }
+        
+        .calendar-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .calendar-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .calendar-weekdays {
+            font-weight: 600;
+            background-color: rgba(42, 127, 98, 0.1);
+            border-radius: 5px;
+            padding: 5px 0;
+        }
+        
+        .journal-entry {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mood-selector {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+        
+        .mood-option {
+            text-align: center;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .mood-option:hover, .mood-option.selected {
+            background-color: rgba(42, 127, 98, 0.1);
+        }
+        
+        .mood-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .water-tracker {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .water-glass {
+            width: 40px;
+            height: 60px;
+            border: 2px solid #2196f3;
+            border-radius: 0 0 10px 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .water-fill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(33, 150, 243, 0.3);
+            transition: height 0.3s;
+        }
+        
+        .water-glass.active .water-fill {
+            background-color: rgba(33, 150, 243, 0.7);
+        }
+        
+        /* New styles for additional features */
+        .tab-pane {
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        .question-card {
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .progress-section {
+            background-color: rgba(42, 127, 98, 0.05);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .diet-plan-card {
+            border-left: 3px solid #4caf50;
+            background-color: rgba(76, 175, 80, 0.05);
+        }
+        
+        .reminder-card {
+            border-left: 3px solid #ff9800;
+            background-color: rgba(255, 152, 0, 0.05);
+        }
+        
+        .dosha-chart {
+            height: 300px;
+        }
+        
+        .followup-item {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background-color: #f8f9fa;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .step-indicator:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #dee2e6;
+            z-index: 0;
+        }
+        
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .step.active .step-number {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .step.completed .step-number {
+            background-color: #4caf50;
+            color: white;
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        .form-step .is-invalid {
+            border-color: #dc3545;
+        }
+        
+        .invalid-feedback {
+            display: none;
+            width: 100%;
+            margin-top: 0.25rem;
+            font-size: 0.875em;
+            color: #dc3545;
+        }
+        
+        .form-step .is-invalid + .invalid-feedback {
+            display: block;
+        }
+        
+        .health-metric {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .health-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .dosha-result-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .vata-result {
+            background: linear-gradient(to right, #8e9eab, #eef2f3);
+        }
+        
+        .pitta-result {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+        }
+        
+        .kapha-result {
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+        }
+        
+        .dosha-score {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            width: 2px;
+            background-color: var(--primary);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            left: 10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            border: 4px solid white;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .timeline-time {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 992px) {
+            .calendar-day {
+                min-height: 80px;
+                padding: 5px;
+            }
+            
+            .activity-dot {
+                width: 6px;
+                height: 6px;
+            }
+            
+            .day-number {
+                width: 25px;
+                height: 25px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+            
+            .calendar-day {
+                min-height: 60px;
+                font-size: 0.8rem;
+            }
+            
+            .login-container {
+                margin: 50px auto;
+                padding: 25px;
+            }
+            
+            .water-tracker {
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            
+            .water-glass {
+                width: 30px;
+                height: 45px;
+            }
+            
+            .step-indicator {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .step {
+                margin: 0 5px 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .calendar-day {
+                min-height: 50px;
+                font-size: 0.7rem;
+                padding: 2px;
+            }
+            
+            .day-number {
+                width: 20px;
+                height: 20px;
+                font-size: 0.7rem;
+            }
+            
+            .activity-dot {
+                display: none;
+            }
+            
+            .feature-icon {
+                font-size: 2rem;
+            }
+        }

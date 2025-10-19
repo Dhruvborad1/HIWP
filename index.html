@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyurHealth - Personalized Wellness Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="hiwp.css">
+</head>
+<body>
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-leaf me-2"></i>AyurHealth
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#" id="navHome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="navAbout">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="navAnalysis">Prakriti Analysis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" id="navDashboard">Dashboard</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-primary" href="#" id="loginBtn">Login</a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-primary" href="#" id="registerBtn">Register</a>
+                    </li>
+                    <li class="nav-item ms-lg-2" id="logoutItem" style="display: none;">
+                        <a class="btn btn-danger" href="#" id="logoutBtn">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcomeSection" class="dashboard-section">
+        <div class="hero-section text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-4">Discover Your Prakriti, Transform Your Health</h1>
+                        <p class="lead mb-5">Personalized Ayurvedic wellness plans based on your unique body constitution for optimal health and vitality.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-light btn-lg px-4 py-3" id="startJourneyBtn">Get Started Today</a>
+                            <a href="#" class="btn btn-outline-light btn-lg px-4 py-3">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Your Personalized Wellness Journey</h2>
+                    <p class="lead text-muted">AyurHealth provides a comprehensive approach to health based on ancient wisdom and modern science</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                                <h4 class="card-title">Prakriti Analysis</h4>
+                                <p class="card-text">Discover your unique body constitution (Vata, Pitta, Kapha) through our comprehensive assessment based on physical, mental, and emotional traits.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-apple-alt"></i>
+                                </div>
+                                <h4 class="card-title">Personalized Nutrition</h4>
+                                <p class="card-text">Receive customized meal plans and dietary recommendations tailored to balance your dosha and meet your specific health goals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <h4 class="card-title">Exercise Planning</h4>
+                                <p class="card-text">Get exercise recommendations that align with your body type, energy levels, and wellness objectives for optimal results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h4 class="card-title">Dynamic Wellness Calendar</h4>
+                                <p class="card-text">Track your daily activities, meals, and wellness routines with our automatically updating monthly calendar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h4 class="card-title">Daily Journal</h4>
+                                <p class="card-text">Record your thoughts, moods, and progress with our integrated wellness journal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4">
+                        <div class="feature-card card h-100">
+                            <div class="card-body text-center p-4">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tint"></i>
+                                </div>
+                                <h4 class="card-title">Hydration Tracker</h4>
+                                <p class="card-text">Monitor your daily water intake with our visual hydration tracker tailored to your body type.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dosha Information Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Understanding Ayurvedic Body Types</h2>
+                    <p class="lead text-muted">Your Prakriti (constitution) determines your ideal approach to health and wellness</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="dosha-card vata-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-wind display-1"></i>
+                                <h3>Vata</h3>
+                            </div>
+                            <p><strong>Characteristics:</strong> Creative, energetic, thin build, dry skin, quick mind</p>
+                            <p><strong>Balancing Foods:</strong> Warm, nourishing, moist foods; cooked grains, soups, nuts</p>
+                            <p><strong>Exercise:</strong> Gentle yoga, walking, tai chi</p>
+                            <p><strong>Daily Routine:</strong> Regular schedule, warm oil massage, calming activities</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="dosha-card pitta-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-fire display-1"></i>
+                                <h3>Pitta</h3>
+                            </div>
+                            <p><strong>Characteristics:</strong> Intelligent, driven, medium build, warm body, sensitive skin</p>
+                            <p><strong>Balancing Foods:</strong> Cooling foods; sweet fruits, vegetables, dairy</p>
+                            <p><strong>Exercise:</strong> Moderate activities, swimming, cycling</p>
+                            <p><strong>Daily Routine:</strong> Avoid overheating, moonlit walks, cooling practices</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="dosha-card kapha-card p-4 h-100">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-water display-1"></i>
+                                <h3>Kapha</h3>
+                            </div>
+                            <p><strong>Characteristics:</strong> Calm, strong, solid build, smooth skin, methodical mind</p>
+                            <p><strong>Balancing Foods:</strong> Light, warm, spicy foods; legumes, vegetables, honey</p>
+                            <p><strong>Exercise:</strong> Vigorous activities, running, aerobics</p>
+                            <p><strong>Daily Routine:</strong> Early rising, dry brushing, stimulating activities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="card bg-primary text-white">
+                    <div class="card-body p-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 mb-4 mb-lg-0">
+                                <h2 class="card-title fw-bold">Ready to Transform Your Health?</h2>
+                                <p class="card-text">Join thousands who have discovered their ideal path to wellness through personalized Ayurvedic guidance.</p>
+                            </div>
+                            <div class="col-lg-4 text-lg-end">
+                                <a href="#" class="btn btn-light btn-lg px-4 py-3" id="welcomeRegisterBtn">Start Your Journey Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Login Section -->
+    <section id="loginSection" class="dashboard-section">
+        <div class="container">
+            <div class="login-container">
+                <h2 class="text-center mb-4">Login to Your Wellness Portal</h2>
+                <form id="loginForm">
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="loginEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="#" id="showRegister">Don't have an account? Register now</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registerSection" class="dashboard-section">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="text-center mb-4">Create Your Wellness Profile</h2>
+                
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div>Personal Info</div>
+                    </div>
+                    <div class="step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div>Health Profile</div>
+                    </div>
+                    <div class="step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div>Prakriti Analysis</div>
+                    </div>
+                    <div class="step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div>Complete</div>
+                    </div>
+                </div>
+                
+                <form id="registrationForm" novalidate>
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" id="step1">
+                        <h4 class="mb-4">Personal Information</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" required>
+                                <div class="invalid-feedback">Please enter your full name</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please enter a valid email address</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required minlength="6">
+                                <div class="invalid-feedback">Password must be at least 6 characters</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                                <div class="invalid-feedback">Passwords must match</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" required>
+                                <div class="invalid-feedback">Please enter your date of birth</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select" id="gender" required>
+                                    <option value="">Select gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your gender</div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" disabled>Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextToStep2">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Health Profile -->
+                    <div class="form-step" id="step2">
+                        <h4 class="mb-4">Health Profile</h4>
+                        <div class="row mb-4">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Height (cm)</label>
+                                <input type="number" class="form-control" id="height" required min="100" max="250">
+                                <div class="invalid-feedback">Please enter a valid height (100-250 cm)</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Weight (kg)</label>
+                                <input type="number" class="form-control" id="weight" required min="30" max="300">
+                                <div class="invalid-feedback">Please enter a valid weight (30-300 kg)</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Blood Type</label>
+                                <select class="form-select" id="bloodType" required>
+                                    <option value="">Select blood type</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                                <div class="invalid-feedback">Please select your blood type</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Allergies</label>
+                                <input type="text" class="form-control" id="allergies" placeholder="List any allergies">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label">Medical Conditions</label>
+                                <textarea class="form-control" id="medicalConditions" rows="2" placeholder="List any medical conditions"></textarea>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label class="form-label">Current Medications</label>
+                                <textarea class="form-control" id="medications" rows="2" placeholder="List current medications"></textarea>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" id="prevToStep1">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextToStep3">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Prakriti Analysis -->
+                    <div class="form-step" id="step3">
+                        <h4 class="mb-4">Prakriti Analysis</h4>
+                        <p class="mb-4">Answer these questions to determine your Ayurvedic body type (Dosha).</p>
+                        
+                        <div class="question-card card mb-3">
+                            <div class="card-body">
+                                <h5>1. Body Frame</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="bodyFrame" id="bodyFrame1" value="vata" required>
+                                    <label class="form-check-label" for="bodyFrame1">
+                                        Thin, light, bony structure
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="bodyFrame" id="bodyFrame2" value="pitta">
+                                    <label class="form-check-label" for="bodyFrame2">
+                                        Medium, muscular build
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="bodyFrame" id="bodyFrame3" value="kapha">
+                                    <label class="form-check-label" for="bodyFrame3">
+                                        Large, solid, heavier build
+                                    </label>
+                                </div>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                        </div>
+                        
+                        <div class="question-card card mb-3">
+                            <div class="card-body">
+                                <h5>2. Skin Type</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinType" id="skinType1" value="vata" required>
+                                    <label class="form-check-label" for="skinType1">
+                                        Dry, thin, cool to touch
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinType" id="skinType2" value="pitta">
+                                    <label class="form-check-label" for="skinType2">
+                                        Sensitive, fair, warm, prone to rashes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="skinType" id="skinType3" value="kapha">
+                                    <label class="form-check-label" for="skinType3">
+                                        Thick, oily, cool, smooth
+                                    </label>
+                                </div>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                        </div>
+                        
+                        <div class="question-card card mb-3">
+                            <div class="card-body">
+                                <h5>3. Hair Type</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hairType" id="hairType1" value="vata" required>
+                                    <label class="form-check-label" for="hairType1">
+                                        Dry, curly, thin, breaks easily
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hairType" id="hairType2" value="pitta">
+                                    <label class="form-check-label" for="hairType2">
+                                        Straight, fine, prone to premature graying
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="hairType" id="hairType3" value="kapha">
+                                    <label class="form-check-label" for="hairType3">
+                                        Thick, oily, wavy, lustrous
+                                    </label>
+                                </div>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                        </div>
+                        
+                        <div class="question-card card mb-3">
+                            <div class="card-body">
+                                <h5>4. Appetite</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="appetite" id="appetite1" value="vata" required>
+                                    <label class="form-check-label" for="appetite1">
+                                        Irregular, sometimes hungry, sometimes not
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="appetite" id="appetite2" value="pitta">
+                                    <label class="form-check-label" for="appetite2">
+                                        Strong, get irritable if meal is delayed
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="appetite" id="appetite3" value="kapha">
+                                    <label class="form-check-label" for="appetite3">
+                                        Steady, can skip meals without discomfort
+                                    </label>
+                                </div>
+                                <div class="invalid-feedback">Please select an option</div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" id="prevToStep2">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextToStep4">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Complete Registration -->
+                    <div class="form-step" id="step4">
+                        <h4 class="mb-4">Review Your Information</h4>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5>Personal Information</h5>
+                                <p><strong>Name:</strong> <span id="reviewName"></span></p>
+                                <p><strong>Email:</strong> <span id="reviewEmail"></span></p>
+                                <p><strong>Date of Birth:</strong> <span id="reviewDob"></span></p>
+                                <p><strong>Gender:</strong> <span id="reviewGender"></span></p>
+                                
+                                <h5 class="mt-4">Health Profile</h5>
+                                <p><strong>Height:</strong> <span id="reviewHeight"></span> cm</p>
+                                <p><strong>Weight:</strong> <span id="reviewWeight"></span> kg</p>
+                                <p><strong>Blood Type:</strong> <span id="reviewBloodType"></span></p>
+                                <p><strong>Allergies:</strong> <span id="reviewAllergies"></span></p>
+                                
+                                <h5 class="mt-4">Prakriti Analysis</h5>
+                                <div id="prakritiResults">
+                                    <p>Your results will appear after submission</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="termsAgreement" required>
+                            <label class="form-check-label" for="termsAgreement">
+                                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                            </label>
+                            <div class="invalid-feedback">You must agree to the terms</div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary" id="prevToStep3">Previous</button>
+                            <button type="submit" class="btn btn-primary">Complete Registration</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container mb-5">
+            <!-- Welcome Header -->
+            <div class="text-center mb-5">
+                <h1 class="fw-bold">Welcome, <span id="userName"></span></h1>
+                <p class="lead">Your personalized wellness journey starts today</p>
+                <div class="d-flex justify-content-center gap-2 mb-4">
+                    <span class="prakriti-badge pitta-badge me-2">Primary: Pitta</span>
+                    <span class="prakriti-badge kapha-badge">Secondary: Kapha</span>
+                </div>
+            </div>
+            
+            <!-- Dashboard Tabs -->
+            <ul class="nav nav-tabs mb-4" id="dashboardTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="overview-tab" data-bs-toggle="tab" data-bs-target="#overview" type="button" role="tab">Overview</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="diet-tab" data-bs-toggle="tab" data-bs-target="#diet" type="button" role="tab">Diet Plan</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="schedule-tab" data-bs-toggle="tab" data-bs-target="#schedule" type="button" role="tab">Daily Schedule</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="followup-tab" data-bs-toggle="tab" data-bs-target="#followup" type="button" role="tab">Follow-ups</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab">Profile</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="dashboardTabContent">
+                <!-- Overview Tab -->
+                <div class="tab-pane fade show active" id="overview" role="tabpanel">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <!-- Dynamic Calendar -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">Wellness Calendar</h5>
+                                    <div>
+                                        <button class="btn btn-sm btn-light me-2" id="prevMonth">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <span id="currentMonthYear" class="fw-bold">August 2023</span>
+                                        <button class="btn btn-sm btn-light ms-2" id="nextMonth">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-3 calendar-weekdays">
+                                        <div class="col text-center">Sun</div>
+                                        <div class="col text-center">Mon</div>
+                                        <div class="col text-center">Tue</div>
+                                        <div class="col text-center">Wed</div>
+                                        <div class="col text-center">Thu</div>
+                                        <div class="col text-center">Fri</div>
+                                        <div class="col text-center">Sat</div>
+                                    </div>
+                                    
+                                    <div id="calendarDays" class="row">
+                                        <!-- Calendar days will be generated by JavaScript -->
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Daily Journal -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Daily Journal</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <h6>How are you feeling today?</h6>
+                                        <div class="mood-selector">
+                                            <div class="mood-option" data-mood="excellent">
+                                                <div class="mood-icon">😊</div>
+                                                <div>Excellent</div>
+                                            </div>
+                                            <div class="mood-option" data-mood="good">
+                                                <div class="mood-icon">🙂</div>
+                                                <div>Good</div>
+                                            </div>
+                                            <div class="mood-option" data-mood="neutral">
+                                                <div class="mood-icon">😐</div>
+                                                <div>Neutral</div>
+                                            </div>
+                                            <div class="mood-option" data-mood="poor">
+                                                <div class="mood-icon">😕</div>
+                                                <div>Poor</div>
+                                            </div>
+                                            <div class="mood-option" data-mood="bad">
+                                                <div class="mood-icon">😞</div>
+                                                <div>Bad</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <label for="journalEntry" class="form-label">Today's Journal Entry</label>
+                                        <textarea class="form-control" id="journalEntry" rows="4" placeholder="Write about your day, how you're feeling, or any wellness observations..."></textarea>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary" id="saveJournal">Save Journal</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+                            <!-- Today's Activities -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Today's Activities</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h6><i class="fas fa-utensils me-2"></i> Food Suggestions</h6>
+                                    <ul>
+                                        <li>Breakfast: Oatmeal with fresh pears and almonds</li>
+                                        <li>Lunch: Quinoa salad with cucumber and mint</li>
+                                        <li>Dinner: Steamed vegetables with coconut curry</li>
+                                        <li>Drink: Fennel tea or coconut water</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-4"><i class="fas fa-running me-2"></i> Exercise Plan</h6>
+                                    <ul>
+                                        <li>Morning: 20 minutes of gentle yoga (cooling poses)</li>
+                                        <li>Evening: 30-minute walk in nature</li>
+                                        <li>Breathing: Sheetali pranayama (cooling breath)</li>
+                                    </ul>
+                                    
+                                    <h6 class="mt-4"><i class="fas fa-spa me-2"></i> Wellness Activities</h6>
+                                    <ul>
+                                        <li>Meditation: 10 minutes of mindfulness</li>
+                                        <li>Self-care: Cool shower before bed</li>
+                                        <li>Emotional: Journaling to release stress</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Hydration Tracker -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Hydration Tracker</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>Recommended water intake: 8 glasses (2 liters)</p>
+                                    <div class="water-tracker">
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                        <div class="water-glass">
+                                            <div class="water-fill"></div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-sm mt-2" id="resetWater">Reset</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Prakriti Analysis -->
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Your Prakriti Analysis</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="bg-warning rounded-circle p-3 me-3">
+                                            <i class="fas fa-fire fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-0">Pitta-Kapha</h5>
+                                            <p class="mb-0">Primary: Pitta | Secondary: Kapha</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-2" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%">Pitta 60%</div>
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 30%">Kapha 30%</div>
+                                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 10%">Vata 10%</div>
+                                    </div>
+                                    
+                                    <p><strong>Key Characteristics:</strong></p>
+                                    <ul>
+                                        <li>Slightly oily skin that becomes shinier in heat</li>
+                                        <li>Lean, active body with steady metabolism</li>
+                                        <li>Calm mindset but restless when overloaded</li>
+                                        <li>Preference for spicy food and cool weather</li>
+                                        <li>Deep, refreshing sleep</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommendations -->
+                    <div id="recommendations">
+                        <h3 class="section-title">Personalized Recommendations</h3>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="card feature-card text-center p-4">
+                                    <i class="fas fa-utensils dashboard-icon"></i>
+                                    <h4>Diet Plan</h4>
+                                    <p>Favor cooling foods like cucumber, melons, and leafy greens. Limit spicy, oily, and fried foods.</p>
+                                    <div class="mt-3">
+                                        <span class="badge bg-success">Pitta Balancing</span>
+                                        <span class="badge bg-info">Kapha Stimulating</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card feature-card text-center p-4">
+                                    <i class="fas fa-running dashboard-icon"></i>
+                                    <h4>Exercise Routine</h4>
+                                    <p>Moderate exercise like swimming, cycling, and yoga. Avoid intense workouts during hot hours.</p>
+                                    <div class="mt-3">
+                                        <span class="badge bg-success">Cooling</span>
+                                        <span class="badge bg-info">Moderate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="card feature-card text-center p-4">
+                                    <i class="fas fa-spa dashboard-icon"></i>
+                                    <h4>Daily Routine</h4>
+                                    <p>Meditation twice daily, regular sleep schedule, and nature walks to maintain balance.</p>
+                                    <div class="mt-3">
+                                        <span class="badge bg-success">Pitta Pacifying</span>
+                                        <span class="badge bg-info">Kapha Energizing</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diet Plan Tab -->
+                <div class="tab-pane fade" id="diet" role="tabpanel">
+                    <h3 class="section-title">Personalized Diet Plan</h3>
+                    <div class="alert alert-info">
+                        This diet plan is customized for your <strong>Pitta-Kapha</strong> constitution. Focus on cooling foods that balance Pitta and light foods that stimulate Kapha.
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card diet-plan-card mb-4">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0"><i class="fas fa-utensils me-2"></i> Recommended Foods</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>Fruits:</strong> Sweet berries, apples, pears, melons, grapes, mangoes</li>
+                                        <li><strong>Vegetables:</strong> Cucumber, zucchini, broccoli, cauliflower, leafy greens</li>
+                                        <li><strong>Grains:</strong> Barley, oats, basmati rice, quinoa</li>
+                                        <li><strong>Proteins:</strong> Mung beans, tofu, chicken (in moderation), freshwater fish</li>
+                                        <li><strong>Dairy:</strong> Milk, ghee, fresh yogurt (in moderation)</li>
+                                        <li><strong>Spices:</strong> Coriander, fennel, mint, turmeric, cumin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card diet-plan-card mb-4">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0"><i class="fas fa-ban me-2"></i> Foods to Avoid</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul>
+                                        <li><strong>Fruits:</strong> Sour fruits like oranges, grapefruit, sour berries</li>
+                                        <li><strong>Vegetables:</strong> Tomatoes, eggplant, spinach, radish, hot peppers</li>
+                                        <li><strong>Grains:</strong> Corn, rye, brown rice (in excess)</li>
+                                        <li><strong>Proteins:</strong> Red meat, seafood, eggs</li>
+                                        <li><strong>Dairy:</strong> Aged cheeses, sour cream, salted butter</li>
+                                        <li><strong>Spices:</strong> Chili peppers, garlic, mustard seeds, excessive salt</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="fas fa-calendar-day me-2"></i> Weekly Meal Plan</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Day</th>
+                                            <th>Breakfast</th>
+                                            <th>Lunch</th>
+                                            <th>Dinner</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Monday</td>
+                                            <td>Oatmeal with sliced pears and almonds</td>
+                                            <td>Quinoa salad with cucumber and mint</td>
+                                            <td>Steamed vegetables with coconut curry</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tuesday</td>
+                                            <td>Rice porridge with cardamom and raisins</td>
+                                            <td>Mung bean soup with basmati rice</td>
+                                            <td>Grilled tofu with sautéed zucchini and quinoa</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wednesday</td>
+                                            <td>Whole wheat toast with apple butter</td>
+                                            <td>Barley salad with roasted vegetables</td>
+                                            <td>Vegetable stir-fry with tofu and ginger</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Thursday</td>
+                                            <td>Fruit smoothie with banana and berries</td>
+                                            <td>Lentil soup with steamed broccoli</td>
+                                            <td>Baked chicken with asparagus and rice</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Friday</td>
+                                            <td>Puffed rice cereal with milk and dates</td>
+                                            <td>Vegetable wrap with hummus</td>
+                                            <td>Fish curry with steamed vegetables</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Daily Schedule Tab -->
+                <div class="tab-pane fade" id="schedule" role="tabpanel">
+                    <h3 class="section-title">Daily Wellness Schedule</h3>
+                    <div class="alert alert-info">
+                        This schedule is optimized for your <strong>Pitta-Kapha</strong> constitution. Maintain balance with cooling activities and moderate exercise.
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">5:30 AM - 6:00 AM</div>
+                                <h5>Wake Up & Oral Hygiene</h5>
+                                <p>Wake up before sunrise. Scrape tongue, brush teeth, drink a glass of warm water.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">6:00 AM - 6:30 AM</div>
+                                <h5>Meditation & Pranayama</h5>
+                                <p>Practice 10 minutes of mindfulness meditation followed by Sheetali pranayama (cooling breath).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">6:30 AM - 7:15 AM</div>
+                                <h5>Yoga Practice</h5>
+                                <p>Gentle yoga focusing on cooling poses: Moon Salutations, Forward Bends, and Twists.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">7:30 AM - 8:00 AM</div>
+                                <h5>Breakfast</h5>
+                                <p>Cooling breakfast: Oatmeal with fresh pears and almonds.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">12:00 PM - 1:00 PM</div>
+                                <h5>Lunch</h5>
+                                <p>Main meal of the day: Quinoa salad with cucumber and mint.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">5:00 PM - 6:00 PM</div>
+                                <h5>Exercise</h5>
+                                <p>Moderate activity: 30-minute walk in nature or swimming.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">7:00 PM - 7:30 PM</div>
+                                <h5>Dinner</h5>
+                                <p>Light dinner: Steamed vegetables with coconut curry.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-icon"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-time">9:30 PM - 10:00 PM</div>
+                                <h5>Wind Down & Sleep</h5>
+                                <p>Cool shower, self-massage with coconut oil, and sleep by 10 PM.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Follow-ups Tab -->
+                <div class="tab-pane fade" id="followup" role="tabpanel">
+                    <h3 class="section-title">Follow-ups & Progress Tracking</h3>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="health-metric">
+                                <i class="fas fa-heartbeat fa-2x mb-2 text-danger"></i>
+                                <h5>Wellness Score</h5>
+                                <div class="health-value">84%</div>
+                                <small>Based on your compliance</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="health-metric">
+                                <i class="fas fa-apple-alt fa-2x mb-2 text-success"></i>
+                                <h5>Diet Compliance</h5>
+                                <div class="health-value">78%</div>
+                                <small>7-day average</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="health-metric">
+                                <i class="fas fa-running fa-2x mb-2 text-primary"></i>
+                                <h5>Activity Level</h5>
+                                <div class="health-value">65%</div>
+                                <small>Recommended target</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="health-metric">
+                                <i class="fas fa-bed fa-2x mb-2 text-info"></i>
+                                <h5>Sleep Quality</h5>
+                                <div class="health-value">82%</div>
+                                <small>7-day average</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-bell me-2"></i> Upcoming Reminders</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="reminder-card card mb-3">
+                                        <div class="card-body">
+                                            <h5><i class="fas fa-calendar-check me-2"></i> Monthly Consultation</h5>
+                                            <p><strong>Date:</strong> August 15, 2023</p>
+                                            <p><strong>Time:</strong> 10:00 AM</p>
+                                            <p><strong>With:</strong> Dr. Ananya Sharma</p>
+                                            <button class="btn btn-sm btn-outline-primary mt-2">Add to Calendar</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="reminder-card card mb-3">
+                                        <div class="card-body">
+                                            <h5><i class="fas fa-prescription me-2"></i> Supplement Refill</h5>
+                                            <p><strong>Reminder:</strong> Your Ashwagandha capsules need refill</p>
+                                            <p><strong>Due:</strong> August 10, 2023</p>
+                                            <button class="btn btn-sm btn-outline-primary mt-2">Order Now</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="reminder-card card">
+                                        <div class="card-body">
+                                            <h5><i class="fas fa-weight me-2"></i> Monthly Weigh-in</h5>
+                                            <p><strong>Due:</strong> August 5, 2023</p>
+                                            <p>Record your weight and measurements</p>
+                                            <button class="btn btn-sm btn-outline-primary mt-2">Record Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i> Progress Tracking</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h5>Wellness Progress</h5>
+                                    <div class="progress mb-3" style="height: 20px;">
+                                        <div class="progress-bar" role="progressbar" style="width: 75%;">75%</div>
+                                    </div>
+                                    
+                                    <h5>Diet Compliance</h5>
+                                    <div class="progress mb-3" style="height: 20px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 65%;">65%</div>
+                                    </div>
+                                    
+                                    <h5>Exercise Consistency</h5>
+                                    <div class="progress mb-3" style="height: 20px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">80%</div>
+                                    </div>
+                                    
+                                    <h5>Stress Management</h5>
+                                    <div class="progress mb-3" style="height: 20px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;">70%</div>
+                                    </div>
+                                    
+                                    <h5>Sleep Quality</h5>
+                                    <div class="progress" style="height: 20px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 85%;">85%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0"><i class="fas fa-comments me-2"></i> Feedback & Consultations</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">How do you feel about your current wellness plan?</label>
+                                <textarea class="form-control" rows="3" placeholder="Share your feedback..."></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Request Consultation</label>
+                                <select class="form-select">
+                                    <option>Select consultation type</option>
+                                    <option>Diet Review</option>
+                                    <option>Exercise Plan Adjustment</option>
+                                    <option>Symptom Discussion</option>
+                                    <option>General Wellness Consultation</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-primary">Submit Feedback</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Tab -->
+                <div class="tab-pane fade" id="profile" role="tabpanel">
+                    <h3 class="section-title">Your Wellness Profile</h3>
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-user me-2"></i> Personal Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Name:</strong> <span id="profileName"></span></p>
+                                    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                                    <p><strong>Date of Birth:</strong> <span id="profileDob"></span></p>
+                                    <p><strong>Gender:</strong> <span id="profileGender"></span></p>
+                                    <p><strong>Member Since:</strong> <span id="profileJoinDate"></span></p>
+                                    <button class="btn btn-sm btn-outline-primary mt-2">Edit Profile</button>
+                                </div>
+                            </div>
+                            
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-heartbeat me-2"></i> Health Metrics</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p><strong>Height:</strong> <span id="profileHeight"></span></p>
+                                    <p><strong>Weight:</strong> <span id="profileWeight"></span></p>
+                                    <p><strong>BMI:</strong> <span id="profileBMI"></span></p>
+                                    <p><strong>Blood Type:</strong> <span id="profileBloodType"></span></p>
+                                    <p><strong>Allergies:</strong> <span id="profileAllergies"></span></p>
+                                    <p><strong>Conditions:</strong> <span id="profileConditions"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-8">
+                            <div class="card mb-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-star-of-david me-2"></i> Prakriti Analysis</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row mb-4">
+                                        <div class="col-md-4">
+                                            <div class="dosha-result-card pitta-result">
+                                                <i class="fas fa-fire fa-3x mb-3"></i>
+                                                <h4>Pitta</h4>
+                                                <div class="dosha-score">60%</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="dosha-result-card kapha-result">
+                                                <i class="fas fa-water fa-3x mb-3"></i>
+                                                <h4>Kapha</h4>
+                                                <div class="dosha-score">30%</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="dosha-result-card vata-result">
+                                                <i class="fas fa-wind fa-3x mb-3"></i>
+                                                <h4>Vata</h4>
+                                                <div class="dosha-score">10%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h5>Key Characteristics</h5>
+                                    <ul>
+                                        <li>Medium build with good muscle development</li>
+                                        <li>Fair, sensitive skin that sunburns easily</li>
+                                        <li>Strong appetite and digestion</li>
+                                        <li>Sharp intellect and good concentration</li>
+                                        <li>Leadership qualities but can be critical</li>
+                                        <li>Prone to inflammation, acidity, and skin rashes</li>
+                                    </ul>
+                                    
+                                    <h5 class="mt-4">Balancing Recommendations</h5>
+                                    <ul>
+                                        <li>Favor cooling foods and drinks</li>
+                                        <li>Avoid excessive heat and sunlight</li>
+                                        <li>Engage in calming activities like moonlit walks</li>
+                                        <li>Practice moderation in all activities</li>
+                                        <li>Develop patience and compassion</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="card">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0"><i class="fas fa-history me-2"></i> Wellness History</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Weight (kg)</th>
+                                                    <th>Wellness Score</th>
+                                                    <th>Notes</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Aug 1, 2023</td>
+                                                    <td>76.2</td>
+                                                    <td>78%</td>
+                                                    <td>Good compliance with diet</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jul 25, 2023</td>
+                                                    <td>76.5</td>
+                                                    <td>72%</td>
+                                                    <td>Missed 2 yoga sessions</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jul 18, 2023</td>
+                                                    <td>77.0</td>
+                                                    <td>65%</td>
+                                                    <td>Travel week, diet compliance low</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Jul 11, 2023</td>
+                                                    <td>77.8</td>
+                                                    <td>60%</td>
+                                                    <td>Started program</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4"><i class="fas fa-leaf me-2"></i>AyurHealth</h5>
+                    <p>Personalized Ayurvedic wellness solutions based on your unique body constitution for optimal health and vitality.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Praktiti Test</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h5 class="mb-4">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white">Dosha Analysis</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Personalized Nutrition</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Exercise Planning</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Daily Wellness</a></li>
+                        <li class="mb-2"><a href="#" class="text-white">Yoga & Meditation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Wellness St, Mumbai</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@ayurhealth.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="mt-5 mb-4" style="background-color: rgba(255,255,255,0.2);">
+            
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2023 AyurHealth. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white me-3">Privacy Policy</a>
+                        <a href="#" class="text-white">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="hiwp.js"></script>
+</body>
+</html>
