@@ -45,4 +45,5 @@ It helps users discover their **Prakriti (body constitution: Vata, Pitta, or Kap
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/hiwp.git
+   git clone https://github.com/Dhruvborad1/HIWP.git
+
